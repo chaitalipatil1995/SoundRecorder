@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9p-g1-mAh">
+                                <rect key="frame" x="150" y="470" width="300" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-J7-Yc1">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="QJv-9z-Vqk"/>
+                                            <constraint firstAttribute="height" constant="100" id="vZh-AM-6GI"/>
+                                        </constraints>
+                                        <state key="normal" title="Record"/>
+                                        <connections>
+                                            <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gjg-zk-J6F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf1-7Q-HjT">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCG-kt-ttS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oih-XK-j7c">
+                                        <rect key="frame" x="200" y="0.0" width="100" height="100"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DgH-dl-1hy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oih-XK-j7c" firstAttribute="height" secondItem="2tf-J7-Yc1" secondAttribute="height" id="3Lq-vQ-tag"/>
+                                    <constraint firstItem="oih-XK-j7c" firstAttribute="width" secondItem="2tf-J7-Yc1" secondAttribute="width" id="TbX-Rg-rjx"/>
+                                    <constraint firstItem="Sf1-7Q-HjT" firstAttribute="width" secondItem="2tf-J7-Yc1" secondAttribute="width" id="g1J-ua-yy4"/>
+                                    <constraint firstItem="Sf1-7Q-HjT" firstAttribute="height" secondItem="2tf-J7-Yc1" secondAttribute="height" id="obi-V0-UFu"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNE-1k-YHJ">
+                                <rect key="frame" x="200" y="175" width="200" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="38v-GW-mWB"/>
+                                    <constraint firstAttribute="width" secondItem="TNE-1k-YHJ" secondAttribute="height" multiplier="15:8" id="BRf-wy-lfS"/>
+                                    <constraint firstAttribute="width" constant="200" id="IVt-Xn-jzx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="T7o-pd-WES"/>
+                                    <constraint firstAttribute="height" constant="250" id="nfX-q4-D3z"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="38v-GW-mWB"/>
+                                        <exclude reference="BRf-wy-lfS"/>
+                                        <exclude reference="T7o-pd-WES"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r9p-g1-mAh" secondAttribute="bottom" constant="30" id="67z-m3-Ce0"/>
+                            <constraint firstItem="r9p-g1-mAh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wf5-5C-3mf"/>
+                            <constraint firstItem="TNE-1k-YHJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YfU-Q2-5Bo"/>
+                            <constraint firstItem="TNE-1k-YHJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0V-DU-Y7u"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
